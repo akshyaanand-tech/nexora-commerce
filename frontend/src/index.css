@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-sans bg-nexora-light-bg text-nexora-light-primary transition-colors duration-300;
+  }
+
+  .dark body,
+  body.dark,
+  html.dark body {
+    @apply bg-nexora-dark-bg text-nexora-dark-primary;
+  }
+
+  html.dark {
+    @apply bg-nexora-dark-bg;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-nexora-light-primary text-white font-medium rounded-lg
+           hover:bg-gray-800 transition-all duration-200 active:scale-[0.98]
+           dark:bg-nexora-dark-primary dark:text-nexora-dark-bg dark:hover:bg-gray-200;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 border border-nexora-light-border text-nexora-light-primary font-medium rounded-lg
+           hover:bg-gray-50 transition-all duration-200 active:scale-[0.98]
+           dark:border-nexora-dark-border dark:text-nexora-dark-primary dark:hover:bg-nexora-dark-card;
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-nexora-light-accent text-white font-medium rounded-lg
+           hover:bg-blue-700 transition-all duration-200 active:scale-[0.98]
+           dark:bg-nexora-dark-accent dark:hover:bg-blue-500;
+  }
+
+  .card {
+    @apply bg-nexora-light-card border border-nexora-light-border rounded-xl shadow-soft
+           dark:bg-nexora-dark-card dark:border-nexora-dark-border;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 bg-nexora-light-card border border-nexora-light-border rounded-lg
+           text-nexora-light-primary placeholder:text-gray-400
+           focus:outline-none focus:ring-2 focus:ring-nexora-light-accent/30 focus:border-nexora-light-accent
+           transition-all duration-200
+           dark:bg-nexora-dark-card dark:border-nexora-dark-border dark:text-nexora-dark-primary
+           dark:focus:ring-nexora-dark-accent/30 dark:focus:border-nexora-dark-accent;
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

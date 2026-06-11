@@ -1,0 +1,12 @@
+{
+  "name": "nexora-commerce",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "db:setup": "cd backend && npm run db:setup",
+    "db:seed": "cd backend && npm run db:seed"
+  }
+}
