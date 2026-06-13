@@ -130,6 +130,6 @@ Cloudinary is optional. Products can use direct image URLs.
 | POST | /api/orders | Place order |
 | GET | /api/admin/analytics | Admin analytics |
 
-## License
+## Author
 
-MIT
+Akshya Anand
